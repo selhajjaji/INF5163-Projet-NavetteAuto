@@ -1,0 +1,194 @@
+% -------------------------------
+% 1. Classe et encodage
+% -------------------------------
+\documentclass[12pt]{article}
+
+% -------- Packages généraux ---------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{array,longtable}
+\usepackage{fancyhdr}
+\usepackage{hyperref}  
+\usepackage[backend=biber, style=ieee, sorting=nty, citestyle=numeric]{biblatex}
+
+\addbibresource{references.bib}
+
+% -------- Réglages ---------
+\geometry{margin=1in}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\onehalfspacing
+
+% Fancyhdr
+\pagestyle{fancy}
+\fancyhead[L]{Projet NavetteAuto}
+\fancyhead[R]{UQO}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+
+% Hyperref pour liens noirs et sans encadré
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% Forcer les puces noires pour toutes les listes
+\setlist[itemize]{label=\textbullet, left=0pt, itemsep=3pt}
+
+
+
+\begin{document}
+
+
+\tableofcontents
+\newpage
+
+% -------------------------------
+% 5. Contenu principal
+% -------------------------------
+
+% Commencer la numérotation des sections à 6
+\setcounter{section}{5}
+
+\section{Gestion, Responsabilité et Propriété Intellectuelle}
+
+\subsection{Propriété intellectuelle et souveraineté}
+
+\subsubsection{Propriété du modèle de décision}
+Dans un contexte académique, le modèle de décision développé dans le cadre du projet \textbf{NavetteAuto} incluant les mécanismes de planification de trajectoire et l’intégration logicielle constitue une création intellectuelle au sens de la législation sur les logiciels.
+
+Dans une université, la règle générale est la suivante :
+
+\begin{itemize}
+    \item Les droits patrimoniaux appartiennent à l’UQO, conformément aux politiques internes sur la propriété intellectuelle des travaux réalisés dans le cadre de projets pédagogiques ou de recherche.
+    \item Nous, les étudiants développeurs, conservons des droits moraux (paternité, intégrité de l’œuvre), mais n’avons pas la maîtrise de l’exploitation commerciale.
+    \item Aucun tiers industriel ne peut revendiquer la propriété en l’absence d’une entente de recherche formelle.
+\end{itemize}
+
+Ainsi, le modèle de décision est juridiquement considéré comme une propriété institutionnelle, relevant de la mission académique de production et diffusion du savoir.
+
+\subsubsection{Propriété des données collectées}
+Les données de mobilité (images, LiDAR, localisation, comportements de piétons) collectées par NavetteAuto proviennent de l’espace public. 
+
+Dans un contexte academique:
+
+\begin{itemize}
+    \item elles sont considérées comme des données publiques appartenant à la municipalité ou à l’établissement au cas où les capteurs opèrent sur un campus ;
+    \item si elles contiennent des informations identifiables, elles sont régies par les normes éthiques universitaires, la Loi 25 et les protocoles institutionnels sur la protection des renseignements personnels ;
+    \item l’équipe de recherche ne détient qu’un droit d’usage, limité à la finalité explicitée dans le protocole de recherche approuvé par le comité d’éthique.
+\end{itemize}
+
+En conséquence, les données n’appartiennent pas aux chercheurs, mais à l’entité publique responsable de l’espace dans lequel elles ont été collectées.
+
+\subsubsection{Tension entre valorisation commerciale et souveraineté}
+Dans un environnement universitaire, la finalité première de la collecte et de l’analyse des données est l’avancement des connaissances, la formation des étudiants et la production de résultats scientifiques reproductibles.
+
+Cependant, ces mêmes données de mobilité possèdent une valeur commerciale importante (entraînement de modèles, optimisation du transport urbain, partenariats industriels), ce qui nourrit une tension institutionnelle, comme l'indique Johnson \cite{johnson2023smartcities}, l’innovation technologique dans les villes intelligentes doit impérativement être équilibrée avec la protection de la vie privée à savoir :
+
+\begin{itemize}
+    \item L’UQO souhaite valoriser la recherche (brevets, licences, partenariats).
+    \item La municipalité veut préserver la souveraineté des données publiques.
+    \item Les citoyens exigent la protection de leur vie privée et un usage éthique de leurs traces numériques.
+\end{itemize}
+
+Dans notre cadre académique, la souveraineté publique doit primer, et toute valorisation doit être encadrée par des conventions de recherche transparentes.
+
+\subsubsection{Modèle de gouvernance recommandé des données}
+L’importance d’un modèle de gouvernance transparent et centré sur la protection des citoyens dans les systèmes intelligents comme le soulève \cite{johnson2023smartcities},\cite{TransportCanada2024SafetyFramework},\cite{Cen2024AIaudit} est nécessaire pour concilier les impératifs de recherche et la souveraineté publique :
+
+
+\begin{itemize}
+    \item Propriété publique des données : La municipalité ou l’UQO demeure propriétaire des données brutes.
+    \item Droit d’usage académique encadré : Les données sont utilisées exclusivement pour la recherche approuvée par le comité d’éthique.
+    \item Minimisation et anonymisation systématiques : Conservation uniquement des données nécessaires à la recherche. Traitement préalable d’anonymisation avant tout entraînement de modèle.
+    \item Transparence scientifique : Publication des méthodologies et limites du système.Mise en place d’un registre de traçabilité de la donnée utilisée pour l’entraînement.
+    \item Partenariats encadrés par des licences universitaires : Toute exploitation commerciale doit passer par le service de valorisation de l’UQO.
+\end{itemize}
+
+Ce modèle garantit un équilibre entre innovation, éthique et souveraineté.
+
+\subsection{Documentation et responsabilité légale}
+
+\subsubsection{Acteurs impliqués et responsabilité en cas d’accident}
+
+Dans un cadre académique, et en l’absence de conducteur humain, le tableau 1, repartit la responsabilité d’un accident impliquant NavetteAuto entre plusieurs acteurs :
+
+\begin{longtable}{|>{\bfseries}m{5cm}|m{9cm}|}
+\hline
+Acteur & Responsabilité potentielle \\ \hline
+Équipe de développement & Défaut de conception ou bug algorithmique. \\ \hline
+UQO & Autorisation, supervision et infrastructure. \\ \hline
+Opérateur technique & Maintenance, calibrations, supervision de sécurité. \\ \hline
+Fabricant du matériel & Défaillance du LiDAR, freinage ou capteurs. \\ \hline
+Municipalité / campus & Infrastructure déficiente (signalisation, aménagement). \\ \hline
+\end{longtable}
+
+L’évaluation post-accident doit donc permettre d’identifier précisément la contribution de chaque acteur.
+
+\subsubsection{Cadres juridiques applicables}
+
+Les principaux cadres juridiques pertinents sont :
+
+\begin{itemize}
+    \item La responsabilité civile : faute, négligence, manquement aux obligations de sécurité.
+    \item La responsabilité du fabricant : pour les composants défectueux.
+    \item Les obligations institutionnelles : conformité aux normes d’éthique, aux autorisations et aux protocoles internes.
+    \item Les normes techniques internationales concernant la sécurité des systèmes autonomes.
+\end{itemize}
+
+\subsubsection{Importance de la traçabilité}
+
+La transparence et la traçabilité constituent aussi des principes soulignés dans les analyses de la gestion des données dans les villes intelligentes \cite{johnson2023smartcities}. Une traçabilité complète est essentielle pour :
+
+\begin{itemize}
+    \item Reconstituer la séquence d’événements.
+    \item Analyser la perception et les décisions du système.
+    \item déterminer si un défaut algorithmique ou matériel est impliqué,
+    \item établir la responsabilité exacte de chaque acteur.
+\end{itemize}
+
+Dans un contexte académique, elle constitue également une exigence éthique pour garantir la reproductibilité scientifique.
+
+\subsubsection{Plan de documentation proposé}
+Un plan structuré de documentation est recommandé pour assurer l’auditabilité du système :
+
+\begin{itemize}
+    \item Journalisation technique : décisions de l’algorithme, erreurs ou défaillances capteurs, version du logiciel et des modèles entraînés.
+    \item Journalisation contextuelle : météo, visibilité, densité de piétons, vitesses, état de la route.
+    \item Traçabilité logicielle : historique des entraînements, dates des mises à jour, paramètres et hyperparamètres utilisés
+    \item Registre d’interventions humaines : arrêts d’urgence, recalibrations, opérations de maintenance.
+    \item Boîte noire sécurisée : enregistrement continu des 30–60 secondes avant et après l’accident ; stockage chiffré, horodaté et inviolable.
+\end{itemize}
+
+\subsubsection{Processus d’audit post-accident}
+Le protocole académique recommandé est le suivant :
+
+\begin{enumerate}
+    \item Gel des enregistrements et des journaux.
+    \item Extraction sécurisée des données par une équipe technique neutre.
+    \item Analyse interne par l’équipe de recherche.
+    \item Audit indépendant (services institutionnels, comité d’éthique).
+    \item Rédaction d’un rapport incluant : causes probables, responsabilités identifiées, recommandations pour les futures expérimentations.
+\end{enumerate}
+
+Ce processus garantit la transparence, la rigueur scientifique et la conformité éthique.
+
+% -------------------------------
+% 6. Bibliographie
+% -------------------------------
+\printbibliography
+
+\end{document}
