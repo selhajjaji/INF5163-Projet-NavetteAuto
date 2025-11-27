@@ -1,0 +1,124 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Cen2024AIaudit}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f8316a98900dc778a7c7fb06c7ace073}{%
+           family={Cen},
+           familyi={C\bibinitperiod},
+           given={Sarah\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6da325769beaf11c8a105260131e1aec}{%
+           family={Alur},
+           familyi={A\bibinitperiod},
+           given={Rohan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Luis Potosi, Mexico}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{8df3ca6c8565625077e6c74416928a28}
+      \strng{fullhash}{8df3ca6c8565625077e6c74416928a28}
+      \strng{bibnamehash}{8df3ca6c8565625077e6c74416928a28}
+      \strng{authorbibnamehash}{8df3ca6c8565625077e6c74416928a28}
+      \strng{authornamehash}{8df3ca6c8565625077e6c74416928a28}
+      \strng{authorfullhash}{8df3ca6c8565625077e6c74416928a28}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '24)}
+      \field{title}{From Transparency to Accountability and Back: A Discussion of Access and Evidence in AI Auditing}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/3689904.3694711
+      \endverb
+    \endentry
+    \entry{johnson2023smartcities}{report}{}
+      \name{author}{1}{}{%
+        {{hash=573e43836eb753717679ebb57e2480d2}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Ashley},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Information Technology}%
+        {Innovation Foundation}%
+      }
+      \list{location}{1}{%
+        {Washington, DC}%
+      }
+      \strng{namehash}{573e43836eb753717679ebb57e2480d2}
+      \strng{fullhash}{573e43836eb753717679ebb57e2480d2}
+      \strng{bibnamehash}{573e43836eb753717679ebb57e2480d2}
+      \strng{authorbibnamehash}{573e43836eb753717679ebb57e2480d2}
+      \strng{authornamehash}{573e43836eb753717679ebb57e2480d2}
+      \strng{authorfullhash}{573e43836eb753717679ebb57e2480d2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Balancing Privacy and Innovation in Smart Cities and Communities}
+      \field{year}{2023}
+    \endentry
+    \entry{TransportCanada2024SafetyFramework}{report}{}
+      \name{author}{1}{}{%
+        {{hash=83f8b090cd704f2eb305242f3459b552}{%
+           family={{Transport Canada}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Government of Canada}%
+      }
+      \list{location}{1}{%
+        {Ottawa, Canada}%
+      }
+      \strng{namehash}{83f8b090cd704f2eb305242f3459b552}
+      \strng{fullhash}{83f8b090cd704f2eb305242f3459b552}
+      \strng{bibnamehash}{83f8b090cd704f2eb305242f3459b552}
+      \strng{authorbibnamehash}{83f8b090cd704f2eb305242f3459b552}
+      \strng{authornamehash}{83f8b090cd704f2eb305242f3459b552}
+      \strng{authorfullhash}{83f8b090cd704f2eb305242f3459b552}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Canada’s Safety Framework for Connected and Automated Vehicles 2.0}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://tc.canada.ca/en/road-transportation/innovative-technologies/connected-automated-vehicles
+      \endverb
+      \verb{url}
+      \verb https://tc.canada.ca/en/road-transportation/innovative-technologies/connected-automated-vehicles
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

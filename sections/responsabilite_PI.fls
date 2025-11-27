@@ -1,0 +1,7 @@
+PWD c:\Users\user\INF5163-Projet-NavetteAuto\sections
+INPUT C:\Users\user\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\user\INF5163-Projet-NavetteAuto\sections\responsabilite_PI.tex
+OUTPUT responsabilite_PI.log
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+OUTPUT responsabilite_PI.pdf
+INPUT C:\Users\user\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map

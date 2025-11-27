@@ -10,24 +10,43 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{csquotes}
-\usepackage{hyperref}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{enumitem}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref} % doit être chargé en dernier parmi les packages visuels
 
-% -------- Réglages ---------
+% -------- Réglages généraux ---------
 \geometry{margin=1in}
 \setlength{\parskip}{6pt}
 \setlength{\parindent}{0pt}
 \onehalfspacing
 
+% -------- Style par défaut (pas d'en-tête fantaisie) ---------
+\pagestyle{plain}
+
 % -------- Bibliographie ---------
 \usepackage[
-backend=biber,
-style=ieee,
-sorting=nty
+    backend=biber,
+    style=ieee,
+    sorting=nty,
+    citestyle=numeric
 ]{biblatex}
+
 \addbibresource{references.bib}
+
+% -------- Listes : puces noires ---------
+\setlist[itemize]{label=\textbullet, left=0pt, itemsep=3pt}
+
+% -------- Hyperref réglages ---------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
 
 % ---------------------------------------------------------
 \begin{document}
@@ -36,29 +55,23 @@ sorting=nty
 %                        PAGE TITRE
 % =========================================================
 \begin{titlepage}
-
 \begin{center}
 
-% ---- Logo ----
 \includegraphics[width=4cm]{images/1.jpg}\\[0.8cm]
 
-% ---- Informations institutionnelles ----
 {\Large \textbf{Université du Québec en Outaouais}}\\[0.2cm]
 {\large Département d’informatique et d’ingénierie}\\[0.8cm]
 
-% ---- Titre du projet ----
-{\Large \textbf{Projet de Session }\\[0.4cm]
+{\Large \textbf{Projet de Session}}\\[0.4cm]
 {\Large \textbf{De la méthode au déploiement :}}\\
 {\Large \textbf{Analyse éthique, légale et sociétale d’une navette urbaine autonome}}\\[1.5cm]
-% ---- Cours et session ----
-{ \large \
-    \textbf{Cours :} INF5163 – Méthodologie de recherche en informatique}\\
-{\large \textbf{Session :}: Automne 2025}\\
+
+{\large \textbf{Cours :} INF5163 – Méthodologie de recherche en informatique}\\
+{\large \textbf{Session :} Automne 2025}\\
 {\large \textbf{Professeur :} N’dah Daniel Yapi, Ph.D.}\\[1cm]
-% ---- Groupe ----
+
 {\large \textbf{Groupe 4 – Projet 1}}\\[0.5cm]
 
-% ---- Liste des membres ----
 \begin{large}
 Tapun Tchouta\\
 Bryan Christian\\
@@ -74,7 +87,6 @@ Siddiki-Barkiddo Saïbou\\
 {\large Novembre 2025}
 
 \end{center}
-
 \end{titlepage}
 
 % =========================================================

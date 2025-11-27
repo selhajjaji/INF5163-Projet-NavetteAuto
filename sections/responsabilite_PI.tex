@@ -1,12 +1,126 @@
-\newpage
-\section{Responsabilité, documentation et propriété intellectuelle}
+% -------------------------------
+% 5. Gestion, Responsabilité et Propriété Intellectuelle
+% -------------------------------
 
-Nous discutons ici des enjeux de responsabilité en cas d’accident :
-fabricant, développeurs, municipalité, opérateurs.
+\setlongtables
+\renewcommand{\LTcapwidth}{\textwidth} % largeur des captions
+\setcounter{LTchunksize}{0} % empêche la répétition automatique
 
-La section inclut également :
+% Supprimer le trait en haut seulement pour la page 8
+%\clearpage
+%\thispagestyle{nohead} 
+
+\section{Gestion, Responsabilité et Propriété Intellectuelle}
+
+\subsection{Propriété intellectuelle et souveraineté}
+
+\subsubsection{Propriété du modèle de décision}
+Dans un contexte académique, le modèle de décision développé dans le cadre de ce projet \textbf{NavetteAuto} constitue une création intellectuelle au sens de la législation sur les logiciels.
+
+Dans une université, la règle générale est la suivante :
+
 \begin{itemize}
-    \item un plan de documentation (journalisation, traçabilité des décisions) ;
-    \item les enjeux de souveraineté des données collectées dans l’espace public ;
-    \item les conflits potentiels entre innovation commerciale et protection citoyenne.
+    \item Les droits patrimoniaux appartiennent à l’UQO, conformément aux politiques internes sur la propriété intellectuelle des travaux réalisés dans le cadre de projets pédagogiques ou de recherche.
+    \item Les étudiants développeurs conservent des droits moraux (paternité, intégrité de l’œuvre), mais n’ont pas la maîtrise de l’exploitation commerciale.
+    \item Aucun tiers industriel ne peut revendiquer la propriété en l’absence d’une entente de recherche formelle.
 \end{itemize}
+
+Ainsi, le modèle de décision est juridiquement considéré comme une propriété institutionnelle, relevant de la mission académique de production et diffusion du savoir.
+
+\subsubsection{Propriété des données collectées}
+Les données de mobilité (images, LiDAR, localisation, comportements de piétons) collectées par NavetteAuto proviennent de l’espace public. 
+
+Dans un contexte academique:
+
+\begin{itemize}
+    \item Elles sont considérées comme des données publiques appartenant à la municipalité ou à l’UQO si les capteurs opèrent sur un campus.
+    \item Si elles contiennent des informations identifiables, elles sont régies par les normes éthiques universitaires, la Loi 25 et les protocoles institutionnels.
+    \item L’équipe de recherche ne détient qu’un droit d’usage limité à la finalité explicite dans le protocole de recherche approuvé par le comité d’éthique.
+\end{itemize}
+
+En conséquence, les données n’appartiennent pas aux chercheurs, mais à l’entité publique responsable de l’espace dans lequel elles ont été collectées.
+
+\subsubsection{Tension entre valorisation commerciale et souveraineté}
+Dans un environnement universitaire, la finalité première de la collecte et de l’analyse des données est l’avancement des connaissances, la formation des étudiants et la production de résultats scientifiques reproductibles.
+
+Cependant,ces données possèdent une valeur commerciale importante (entraînement de modèles, optimisation du transport urbain, partenariats industriels), ce qui crée une tension institutionnelle, comme l'indique Johnson dans \cite{johnson2023smartcities} :
+
+\begin{itemize}
+    \item L’UQO souhaite valoriser la recherche (brevets, licences, partenariats).
+    \item La municipalité veut préserver la souveraineté des données publiques.
+    \item Les citoyens exigent la protection de leur vie privée et un usage éthique.
+\end{itemize}
+
+Dans notre cadre académique, la souveraineté publique doit primer, et toute valorisation doit être encadrée par des conventions transparentes.
+
+\subsubsection{Modèle de gouvernance recommandé des données}
+L’importance d’un modèle de gouvernance transparent et centré sur la protection des citoyens dans les systèmes intelligents comme le soulève  \cite{Cen2024AIaudit},\cite{johnson2023smartcities},\cite{TransportCanada2024SafetyFramework} est nécessaire pour concilier les impératifs de recherche et la souveraineté publique  :
+
+\begin{itemize}
+    \item Propriété publique des données : la municipalité ou l’UQO demeure propriétaire.
+    \item Droit d’usage académique encadré : les données sont utilisées exclusivement pour la recherche approuvée.
+    \item Minimisation et anonymisation systématiques : seules les données nécessaires sont conservées.
+    \item Transparence scientifique : publication des méthodologies et registre de traçabilité.
+    \item Partenariats encadrés par des licences universitaires pour toute exploitation commerciale.
+\end{itemize}
+
+Ce modèle garantit un équilibre entre innovation, éthique et souveraineté.
+
+\subsection{Documentation et responsabilité légale}
+
+\subsubsection{Acteurs impliqués et responsabilité en cas d’accident}
+Dans un cadre académique, et en l’absence de conducteur humain, le tableau 1, repartit la responsabilité d’un accident impliquant NavetteAuto entre plusieurs acteurs :
+
+\begin{longtable}{|>{\raggedright\bfseries}p{4.5cm}|>{\raggedright}p{8.5cm}|}
+\hline
+Acteur & Responsabilité potentielle \\ \hline
+Équipe de développement & Défaut de conception ou bug algorithmique. \\ \hline
+UQO & Autorisation, supervision et infrastructure. \\ \hline
+Opérateur technique & Maintenance, calibrations, supervision de sécurité. \\ \hline
+Fabricant du matériel & Défaillance du LiDAR, freinage ou capteurs. \\ \hline
+Municipalité ou campus & Infrastructure déficiente (signalisation, aménagement). \\ \hline
+\end{longtable}
+
+L’évaluation post-accident doit donc permettre d’identifier précisément la contribution de chaque acteur.
+
+\subsubsection{Cadres juridiques applicables}
+\begin{itemize}
+    \item La responsabilité civile : faute, négligence, manquement aux obligations de sécurité.
+    \item La responsabilité du fabricant : pour les composants défectueux.
+    \item Obligations institutionnelles : conformité aux normes d’éthique et protocoles internes.
+    \item Normes techniques internationales concernant la sécurité des systèmes autonomes.
+\end{itemize}
+
+\subsubsection{Importance de la traçabilité}
+La transparence et la traçabilité constituent aussi des principes soulignés dans les analyses de la gestion des données dans les villes intelligentes \cite{Cen2024AIaudit}. Une traçabilité complète est essentielle pour :
+\begin{itemize}
+    \item Reconstituer la séquence d’événements.
+    \item Analyser la perception et les décisions du système.
+    \item Déterminer si un défaut algorithmique ou matériel est impliqué.
+    \item Établir la responsabilité exacte de chaque acteur.
+\end{itemize}
+
+Dans un contexte académique, elle constitue également une exigence éthique pour garantir la reproductibilité scientifique.
+
+\subsubsection{Plan de documentation proposé}
+Un plan structuré de documentation est recommandé pour assurer l’auditabilité du système :
+
+\begin{itemize}
+    \item Journalisation technique : décisions de l’algorithme, erreurs ou défaillances, version du logiciel et modèles.
+    \item Journalisation contextuelle : météo, visibilité, densité de piétons, vitesses, état de la route.
+    \item Traçabilité logicielle : historique des entraînements, dates des mises à jour, paramètres et hyperparamètres.
+    \item Registre d’interventions humaines : arrêts d’urgence, recalibrations, maintenance.
+    \item Boîte noire sécurisée : enregistrement continu des 30–60 secondes avant et après l’accident, stockage chiffré, horodaté et inviolable.
+\end{itemize}
+
+\subsubsection{Processus d’audit post-accident}
+Le protocole académique recommandé est le suivant :
+\begin{enumerate}
+    \item Gel des enregistrements et journaux.
+    \item Extraction sécurisée par une équipe technique neutre.
+    \item Analyse interne par l’équipe de recherche.
+    \item Audit indépendant (services institutionnels, comité d’éthique).
+    \item Rapport incluant causes probables, responsabilités identifiées, recommandations.
+\end{enumerate}
+
+Ce processus garantit transparence, rigueur scientifique et conformité éthique.
